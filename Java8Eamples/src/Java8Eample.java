@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -25,5 +22,31 @@ public class Java8Eample {
         List<Integer> sameNumber = input.stream().filter(n->!seen.add(n)).collect(Collectors.toList());
         System.out.println("i = " + s);
         System.out.println("i = " + sameNumber);
+
+
+       // --------------------------------------------------------------------------------------->
+        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+
+        //3 minimum Numbers
+
+        System.out.println("-----------------");
+
+        System.out.println("Minimum 3 Numbers");
+
+        System.out.println("-----------------");
+
+        listOfIntegers.stream().sorted().limit(3).forEach(System.out::println);
+
+        //3 Maximum Numbers
+
+        System.out.println("-----------------");
+
+        System.out.println("Maximum 3 Numbers");
+
+        System.out.println("-----------------");
+
+        listOfIntegers.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
     }
 }
+
+
